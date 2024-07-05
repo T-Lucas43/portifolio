@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    animation: fadeIn 2s ease-in;
+    overflow: hidden; /* Para evitar a barra de rolagem */
+}
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('https://wallpaperaccess.com/full/1638090.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    animation: slideDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    color: #1e90ff;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+section h2 {
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 2s ease-in;
+}
+
+.project {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #1e90ff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(30, 144, 255, 0.5);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+footer p {
+    margin: 0;
+    color: #1e90ff;
+}
+
+.social-links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .project {
+        margin: 15px 0;
+        padding: 15px;
+    }
+}
+
+.star {
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
